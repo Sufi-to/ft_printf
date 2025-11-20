@@ -6,7 +6,7 @@
 /*   By: ttecleha <ttecleha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 19:55:24 by ttecleha          #+#    #+#             */
-/*   Updated: 2025/11/19 20:01:52 by ttecleha         ###   ########.fr       */
+/*   Updated: 2025/11/20 22:09:06 by ttecleha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,10 @@ int	ft_whichf(va_list args, const char f)
 		c += ft_putnbru(va_arg(args, unsigned int));
 	else if (f == 'p')
 		c += ft_padd(va_arg(args, uintptr_t));
+	else if (f == 'x')
+		c += ft_hexa(va_arg(args, ssize_t), 0);
+	else if (f == 'X')
+		c += ft_hexa(va_arg(args, ssize_t), 1);
 	else if (f == '%')
 		c += ft_putchar('%');
 	return (c);
@@ -83,7 +87,7 @@ int	ft_printf(const char *fmt, ...)
 
 int main(void)
 {
-    int x = ft_printf("hello %s %c %d %% %u %p\n", "nigga", 'r', 432, 2342342423, 29834);
+    int x = ft_printf("hello %s %c %d %% %u %p %x\n", "nigga", 'r', 432, 2342342423, 29834, 0x3224ab);
     printf("%d\n", x);
 	printf("%p\n", &x);
 	ft_printf("%p\n", &x);

@@ -6,7 +6,7 @@
 /*   By: ttecleha <ttecleha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 19:52:06 by ttecleha          #+#    #+#             */
-/*   Updated: 2025/11/19 19:59:18 by ttecleha         ###   ########.fr       */
+/*   Updated: 2025/11/20 22:10:14 by ttecleha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int		ft_numlenu(unsigned int n);
 int		ft_ptrlen(uintptr_t ptr);
 void	ft_putptr(uintptr_t ptr);
 int		ft_padd(uintptr_t ptr);
+int		ft_hexa(unsigned int nbr, int upper_case);
 
 #endif
