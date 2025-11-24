@@ -6,7 +6,7 @@
 /*   By: ttecleha <ttecleha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 21:56:43 by ttecleha          #+#    #+#             */
-/*   Updated: 2025/11/20 22:08:51 by ttecleha         ###   ########.fr       */
+/*   Updated: 2025/11/24 19:55:02 by ttecleha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 static size_t	h_digits(unsigned int n)
 {
-	size_t	digits;
+	size_t	count;
 
-	digits = 0;
+	count = 0;
 	if (n == 0)
 		return (1);
 	while (n != 0)
 	{
-		digits += 1;
+		count += 1;
 		n /= 16;
 	}
-	return (digits);
+	return (count);
 }
 
 static void	put_hexa(unsigned int nbr, int upper_case)
